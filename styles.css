@@ -89,13 +89,13 @@
 
         /* -- colours - begin -- */
 
-        --color-background-light: #ffffff;
-        --color-background-dark: #2f0728;
+        --color-background-light: #faf9f3;
+        --color-background-dark: #1d2a65;
 
-        --color-accent-light-primary: #9f368c;
-        --color-accent-light-secondary: #daafd9;
-        --color-accent-dark-primary: #450f3b;
-        --color-accent-dark-secondary: #280c23;
+        --color-accent-light-primary: #cacdd6;
+        --color-accent-light-secondary: #ebe8de;
+        --color-accent-dark-primary: #868eaa;
+        --color-accent-dark-secondary: #414f89;
 
         --color-accent-opaque-light-primary: rgba(159, 54, 140, 0.2);
         --color-accent-opaque-light-secondary: rgba(218, 175, 217, 0.2);
@@ -116,7 +116,7 @@
         --color-static-light-8: rgba(255, 255, 255, 0.8);
 
         color-scheme: light dark;
-        color: light-dark(var(--color-accent-dark-secondary), var(--color-static-light-8));
+        color: light-dark(var(--color-background-dark), var(--color-accent-light-secondary));
 
         /* -- colours - end -- */
 
