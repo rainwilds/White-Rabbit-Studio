@@ -963,24 +963,7 @@
             &.home {
                     color: var(--color-background-light);
                     background-size: cover !important;
-            }
-
-            &.home:nth-of-type(1) {
-                background: linear-gradient(0deg, var(--color-accent-opaque-light-primary), var(--color-accent-opaque-dark-primary)), url(./img/cushion-covers-sunshine-coast-brisbane-2-768.jpg);
-                
-            }
-
-            &.home:nth-of-type(2) {
-                background: linear-gradient(0deg, var(--color-accent-opaque-light-primary), var(--color-accent-opaque-dark-primary)), url(./img/roller-blinds-sunshine-coast-brisbane-1-768.jpg);
-            }
-
-            &.home:nth-of-type(3) {
-                background: linear-gradient(0deg, var(--color-accent-opaque-light-primary), var(--color-accent-opaque-dark-primary)), url(./img/sheer-curtains-sunshine-coast-brisbane-3-768.jpg);
-            }
-
-            &.home:nth-of-type(4) {
-                background: linear-gradient(0deg, var(--color-accent-opaque-light-primary), var(--color-accent-opaque-dark-primary)), url(./img/upholstery-repairs-sunshine-coast-brisbane-1-768.jpg);
-            }            
+            }           
 
             &.text-align-left {
                 text-align: left;
@@ -1336,7 +1319,7 @@ main {
     overflow-x: hidden;
 
     >section {
-        &:first-child {
+        /* &:first-child {
 
             margin-top: calc(var(--space-huge) * 1.2);
 
@@ -1384,7 +1367,7 @@ main {
         &:nth-last-of-type(3) {
             grid-column-start: 1;
             grid-column-end: -1;
-        }
+        } */
 
         >picture {
 
