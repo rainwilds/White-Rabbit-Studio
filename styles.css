@@ -145,7 +145,7 @@
 
         /* adobe font requirements */
         font-weight: var(--font-2-weight-light);
-        font-style: normal;
+        /* font-style: normal; */
 
         /* -- font - end -- */
 
@@ -299,12 +299,12 @@
         h4,
         h5,
         h6 {
-            font-family: var(--font-2-family);
+            font-family: var(--font-1-family);
             line-height: 1;
 
             /* adobe font requirements */
-            font-weight: var(--font-2-weight-heavy);
-            font-style: normal;
+            font-weight: var(--font-1-weight-medium);
+            /* font-style: normal; */
 
             margin-bottom: var(--space-tiny);
         }
