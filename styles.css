@@ -391,9 +391,9 @@
                 & {
                     grid-template: 150vh / 0 repeat(12, 1fr) 0 !important;
                     grid-template-areas:
-                        "gutter-left header header header header header header gutter-right"
-                        "gutter-left main main main main main main gutter-right"
-                        "gutter-left footer footer footer footer footer footer gutter-right" !important;
+                        "gutter-left header header header header header header header header header header header header gutter-right"
+                        "gutter-left main main main main main main main main main main main main gutter-right"
+                        "gutter-left footer footer footer footer footer footer footer footer footer footer footer gutter-right" !important;
                 }
 
             }
@@ -403,9 +403,9 @@
                 & {
                     grid-template: 100vh / 0 repeat(12, 1fr) 0;
                     grid-template-areas:
-                        "gutter-left header header header header header header gutter-right"
-                        "gutter-left main main main main main main gutter-right"
-                        "gutter-left footer footer footer footer footer footer gutter-right";
+                        "gutter-left header header header header header header header header header header header header gutter-right"
+                        "gutter-left main main main main main main main main main main main main gutter-right"
+                        "gutter-left footer footer footer footer footer footer footer footer footer footer footer gutter-right";
                     column-gap: var(--space-small);
                 }
 
@@ -416,9 +416,9 @@
                 & {
                     grid-template: 100vh / 5vw repeat(12, 1fr) 5vw;
                     grid-template-areas:
-                        "gutter-left header header header header header header gutter-right"
-                        "gutter-left main main main main main main gutter-right"
-                        "gutter-left footer footer footer footer footer footer gutter-right";
+                        "gutter-left header header header header header header header header header header header header gutter-right"
+                        "gutter-left main main main main main main main main main main main main gutter-right"
+                        "gutter-left footer footer footer footer footer footer footer footer footer footer footer gutter-right";
                 }
 
             }
@@ -428,9 +428,9 @@
                 & {
                     grid-template: 100vh / 10vw repeat(12, 1fr) 10vw;
                     grid-template-areas:
-                        "gutter-left header header header header header header gutter-right"
-                        "gutter-left main main main main main main gutter-right"
-                        "gutter-left footer footer footer footer footer footer gutter-right";
+                        "gutter-left header header header header header header header header header header header header gutter-right"
+                        "gutter-left main main main main main main main main main main main main gutter-right"
+                        "gutter-left footer footer footer footer footer footer footer footer footer footer footer gutter-right";
                 }
 
             }
