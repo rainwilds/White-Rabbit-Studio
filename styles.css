@@ -1218,7 +1218,7 @@ header {
         z-index: 3;
         align-self: end;
         /* text-align: center; PLACEHOLDER */
-        max-width: 60vw;
+        max-width: 40vw;
         /* justify-self: center; PLACEHOLDER */
         /* filter: drop-shadow(0px 0px 70px light-dark(var(--color-accent-dark-primary), var(--color-accent-light-primary)));  PLACEHOLDER */
 
@@ -1229,7 +1229,7 @@ header {
 
         >h1.logo-text {
             /* text-shadow: var(--color-static-light) 10px 10px 3rem; PLACEHOLDER */
-            font-size: clamp(3rem, 10vh, 13vh);
+            font-size: clamp(3rem, 8vh, 10vh);
             padding: var(--space-medium);
             line-height: 0.8;
             font-family: var(--font-1-family);
