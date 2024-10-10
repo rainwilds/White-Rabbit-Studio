@@ -77,11 +77,11 @@
 
         /* -- space - begin -- */
 
-        --space-tiny: 0.5rem;
-        --space-small: 1rem;
-        --space-medium: 1.7rem;
-        --space-large: 3.5rem;
-        --space-huge: 5rem;
+        --space-tiny: 1rem;
+        --space-small: 2rem;
+        --space-medium: 3rem;
+        --space-large: 7rem;
+        --space-huge: 10rem;
 
         --max-width: 60vw;
 
@@ -334,7 +334,7 @@
         }
 
         p:not(:last-of-type) {
-            margin-bottom: var(--space-medium);
+            margin-bottom: var(--space-small);
         }
 
         article p:nth-child(1)::first-line {
