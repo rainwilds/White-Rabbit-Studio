@@ -482,6 +482,39 @@
         height: min-content;
 
 
+
+
+        &:last-of-type {
+
+            width: 100%;
+            background: none;
+            box-shadow: none;
+
+            @supports selector(backdrop-filter) {
+                backdrop-filter: none;
+            }
+
+            -webkit-backdrop-filter: none;
+
+            margin-top: var(--space-small);
+            grid-area: header;
+
+            form {
+
+                gap: 0;
+
+                select {
+                    box-shadow: 10px 10px 50px -1px var(--color-static-dark-1);
+                    border-color: light-dark(var(--color-accent-dark-primary), var(--color-accent-light-primary));
+                    background-color: light-dark(var(--color-static-light-6), var(--color-static-dark-6));
+                    text-align: center;
+                    text-align-last: center;
+                    justify-self: center;
+                    width: fit-content;
+                }
+
+            }
+
             @media (max-width: 1023px) {
 
                 & {
@@ -495,15 +528,7 @@
 
             }
 
-            @media (min-width: 1024px) {
 
-                & {
-
-                    display: none;
-
-
-                }
-            }
         }
 
         >ul {
