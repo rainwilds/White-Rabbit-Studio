@@ -139,9 +139,9 @@
         font-size: var(--font-2-size-medium);
 
         /* base font size */
-        --font-2-size-small: 19px;
-        --font-2-size-medium: 22px;
-        --font-2-size-large: 24px;
+        --font-2-size-small: 23px;
+        --font-2-size-medium: 25px;
+        --font-2-size-large: 27px;
 
         /* adobe font requirements */
         font-weight: var(--font-2-weight-light);
@@ -334,7 +334,7 @@
         }
 
         p:not(:last-of-type) {
-            margin-bottom: var(--space-small);
+            margin-bottom: var(--space-tiny);
         }
 
         article p:nth-child(1)::first-line {
