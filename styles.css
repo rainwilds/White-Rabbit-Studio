@@ -478,69 +478,9 @@
 
     nav {
 
-        grid-area: header / gutter-left / header / gutter-right;
-        z-index: 3;
-        justify-self: center;
+
         height: min-content;
-        margin-top: var(--space-medium);
 
-        @supports selector(backdrop-filter) {
-            backdrop-filter: blur(10px);
-        }
-
-        -webkit-backdrop-filter: blur(10px);
-
-        padding: var(--space-tiny) var(--space-medium);
-        border-radius: var(--border-radius-small);
-        background-image: var(--background-noise);
-        box-shadow: 10px 10px 50px -1px var(--color-static-dark-1);
-        border: solid var(--border-size-small);
-        border-color: light-dark(var(--color-accent-dark-primary), var(--color-accent-light-primary));
-        background-color: light-dark(var(--color-static-light-6), var(--color-static-dark-6));
-
-        &:first-of-type {
-
-            @media (max-width: 1023px) {
-
-                & {
-
-                    display: none;
-
-                }
-            }
-
-        }
-
-        &:last-of-type {
-
-            width: 100%;
-            background: none;
-            box-shadow: none;
-
-            @supports selector(backdrop-filter) {
-                backdrop-filter: none;
-            }
-
-            -webkit-backdrop-filter: none;
-
-            margin-top: var(--space-small);
-            grid-area: header;
-
-            form {
-
-                gap: 0;
-
-                select {
-                    box-shadow: 10px 10px 50px -1px var(--color-static-dark-1);
-                    border-color: light-dark(var(--color-accent-dark-primary), var(--color-accent-light-primary));
-                    background-color: light-dark(var(--color-static-light-6), var(--color-static-dark-6));
-                    text-align: center;
-                    text-align-last: center;
-                    justify-self: center;
-                    width: fit-content;
-                }
-
-            }
 
             @media (max-width: 1023px) {
 
@@ -569,6 +509,7 @@
         >ul {
             list-style-type: none;
             display: flex;
+            justify-content: space-between;
             align-items: center;
             gap: var(--space-medium);
 
