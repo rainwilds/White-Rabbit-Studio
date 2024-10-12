@@ -908,7 +908,6 @@
             text-align: center;
             border: solid var(--border-size-small);
             border-color: light-dark(var(--color-accent-dark-primary), var(--color-accent-light-primary));
-            border-radius: var(--border-radius-medium);
             background-color: transparent;
             height: 100%;
 
