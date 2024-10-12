@@ -1460,7 +1460,7 @@ footer {
     grid-template-columns: subgrid;
     grid-area: footer / gutter-left / footer / gutter-right;
     background-color: light-dark(var(--color-accent-opaque-light-primary), var(--color-accent-opaque-dark));
-    margin-bottom: 0 var(--space-medium) var(--space-medium) var(--space-medium);
+    margin: 0 var(--space-medium) var(--space-medium) var(--space-medium);
 
     img {
         margin-top: var(--space-medium);
