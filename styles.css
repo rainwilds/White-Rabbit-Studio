@@ -1144,7 +1144,8 @@ header {
         grid-area: header / gutter-left / header / gutter-right;
         background-color: light-dark(var(--color-static-light-2), var(--color-static-dark-4));
         z-index: 1;
-        animation: 5s linear 1s image-reveal;
+        animation: 3s linear 1s image-reveal ease-out;
+        animation-fill-mode: forwards;
     }
 
     >picture {
