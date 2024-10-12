@@ -643,9 +643,9 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: var(--space-medium);
-        grid-column-start: 1 !important;
+        grid-column-start: 6;
         grid-column-end: -1 !important;
-        margin: 0 var(--space-medium);
+        margin-right: var(--space-medium);
 
         &.feature {
             gap: var(--space-large);
