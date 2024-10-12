@@ -243,8 +243,8 @@
             padding: var(--space-tiny);
             border: solid 1px;
             border-color: light-dark(var(--color-accent-dark-primary), var(--color-accent-light-primary));
-            border-radius: var(--border-radius-small);
-            background-size: 32px 32px;
+            /* border-radius: var(--border-radius-small); PLACEHOLDER */
+            background-size: 32px 32px; 
         }
 
         input,
@@ -255,7 +255,7 @@
 
         button {
             background-image: var(--background-noise);
-            padding: var(--space-tiny) var(--space-medium);
+            padding: calc(var(--space-tiny)/2) var(--space-tiny);
 
             &:hover {
                 background-color: light-dark(var(--color-accent-light-primary), var(--color-accent-light-secondary));
@@ -646,6 +646,10 @@
         grid-column-start: 6;
         grid-column-end: -1 !important;
         margin-right: var(--space-medium);
+
+        &.tile {
+            flex-direction: column;
+        }
 
         &.feature {
             gap: var(--space-large);
