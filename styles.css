@@ -643,8 +643,9 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: var(--space-medium);
-        grid-column-start: 2 !important;
-        grid-column-end: -2 !important;
+        grid-column-start: 1 !important;
+        grid-column-end: -1 !important;
+        margin: 0 var(--space-medium);
 
         &.feature {
             gap: var(--space-large);
@@ -901,14 +902,14 @@
         >div {
 
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            padding: var(--space-medium);
-            text-align: center;
+            /* flex-direction: column; */
+            /* justify-content: space-between; */
+            /* align-items: center; */
+            padding: var(--space-small);
+            /* text-align: center; */
             border: solid var(--border-size-small);
             border-color: light-dark(var(--color-accent-dark-primary), var(--color-accent-light-primary));
-            background-color: transparent;
+            /* background-color: transparent; */
             height: 100%;
 
             &.category {
