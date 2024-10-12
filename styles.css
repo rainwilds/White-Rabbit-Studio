@@ -370,6 +370,8 @@
         img,
         picture {
 
+            object-fit: cover;
+
             @media (prefers-color-scheme: dark) {
 
                 &:not(div[id^="gallery-item-"] picture, div[id^="gallery-item-"] img) {
