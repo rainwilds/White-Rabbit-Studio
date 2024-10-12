@@ -90,7 +90,7 @@
         /* -- colours - begin -- */
 
         --color-background-light: #faf9f3;
-        --color-background-dark: #0e1b41;
+        --color-background-dark: #141b32;
 
         --color-accent-light-primary: #cacdd6;
         --color-accent-light-secondary: #ebe8de;
@@ -208,15 +208,15 @@
 
         .animate {
             opacity: 0;
-            transition: opacity 0.5s ease-out;
+            transition: opacity 1s ease-out;
         }
 
         .animate-top-down {
-            animation: fadeInTopDown 1s forwards;
+            animation: fadeInTopDown 2s forwards;
         }
 
         .animate-fade-in {
-            animation: fadeIn 1.5s forwards;
+            animation: fadeIn 3s forwards;
         }
 
         a:any-link {
