@@ -1145,7 +1145,7 @@ header {
         background-color: light-dark(var(--color-static-light-2), var(--color-static-dark-4));
         z-index: 1;
         /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
-        animation: 3.5s ease-out 0.5s forwards image-reveal ;
+        animation: 2.5s ease-out 0s forwards image-reveal ;
     }
 
     >picture {
