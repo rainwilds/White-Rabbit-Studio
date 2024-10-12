@@ -65,18 +65,7 @@
 
     <main>
 
-        <!-- <nav style="    grid-column-start: 1;
-        grid-column-end: -1;
-        padding: 0 var(--space-medium);">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./portfolio.html">Portfolio</a></li>
-                <li><a href="./investment.html">Investment</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="./about.html">About</a></li>
-            </ul>
-        </nav> -->
+
 
         <section style="    grid-column-start: 1;
         grid-column-end: span 4;
@@ -92,21 +81,33 @@
         </section>
 
 
-
-        <section style="    grid-column-start: 6;
+        <section style="
+        grid-column-start: 6;
         grid-column-end: -1;
-        
-        height: fit-content;">
-
-
-            <p>Lorem ipsum dolor sit amet. Qui illum nobis est temporibus asperiores <a
-                    href="https://www.loremipzum.com" target="_blank">Ut autem aut voluptas assumenda</a>. Sed
-                officia repellat et pariatur veliteos similique nam quae quae ut eveniet nisi. </p>
-            <img src="./img/sample.jpg" alt="">
-
+        height: fit-content;
+        display: grid;
+        ">
+            <div style="
+        grid-row-start: 1;
+        display: flex;
+        align-items: flex-end;
+        margin-right: var(--space-small);
+    ">
+                <p style="
+        /* grid-row-start: 1; */
+        /* text-orientation: upright; */
+        writing-mode: vertical-rl;
+        max-height: 40vh;
+        transform: rotate(180deg);
+    ">Lorem ipsum dolor sit amet. Qui illum nobis est temporibus asperiores <a href="https://www.loremipzum.com"
+                        target="_blank">Ut autem aut voluptas assumenda</a>. Sed
+                    officia repellat et pariatur veliteos similique nam quae quae ut eveniet nisi. </p>
+            </div>
+            <img src="./img/sample.jpg" alt="" style="
+        grid-row-start: 1;
+    ">
 
         </section>
-
 
 
         <div style="    grid-column-end: -1;
@@ -119,8 +120,6 @@ justify-self: end; ">
 
         </div>
 
-
-
         <picture style="grid-column-end: span 5;
     grid-column-start: 1;">
 
@@ -129,7 +128,7 @@ justify-self: end; ">
         </picture>
         <section class="cards">
 
-            <div class="tile">
+            <div class="tile" style="border-color: light-dark(var(--color-accent-light-primary), var(--color-accent-dark-primary)); background: light-dark(var(--color-accent-light-primary), var(--color-accent-dark-primary));">
                 <hgroup>
                     <h2>Est expedita temporibus ut sunt porro sed totam molestiae. </h2>
                     <p>Lorem ipsum dolor sit amet. Qui illum nobis est temporibus asperiores <a
@@ -157,6 +156,19 @@ justify-self: end; ">
     <footer>
 
         <h2 style="margin: 0;">White Rabbit Studio.</h2>
+
+        <nav style="    grid-column-start: 1;
+        grid-column-end: -1;
+        padding: 0 var(--space-medium);">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./investment.html">Investment</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </nav>
 
     </footer>
 
