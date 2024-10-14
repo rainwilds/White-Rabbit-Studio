@@ -244,7 +244,7 @@
             border: solid 1px;
             border-color: light-dark(var(--color-accent-dark-primary), var(--color-accent-light-primary));
             /* border-radius: var(--border-radius-small); PLACEHOLDER */
-            background-size: 32px 32px; 
+            background-size: 32px 32px;
         }
 
         input,
@@ -1028,197 +1028,33 @@ header {
     grid-template-rows: subgrid;
     grid-area: header / gutter-left / header / gutter-right;
     color: light-dark(var(--color-accent-opaque-dark-secondary), var(--color-accent-light-secondary));
-    overflow: hidden;
-
-    &:has(i)>picture:first-of-type {
-
-        @media (max-width: 980px) {
-
-            & {
-                height: 60vh;
-            }
-
-        }
-
-    }
-
-    >a {
-        width: 370px;
-        grid-area: header / gutter-left / header / gutter-right;
-        position: absolute;
-        display: flex;
-        justify-self: center;
-        align-self: flex-start;
-        bottom: var(--space-large);
-        right: var(--space-large);
-        z-index: 4;
-
-        >picture {
-
-            @media (max-width: 980px) {
-
-                & {
-                    height: 100%;
-                }
-
-            }
-
-        }
-
-        @media (max-width: 980px) {
-
-            & {
-                width: 310px;
-                position: relative;
-                z-index: 2;
-                bottom: initial;
-                right: initial;
-            }
-
-        }
-
-    }
+    margin: 5vw;
 
     >div {
         grid-area: header / gutter-left / header / gutter-right;
         background-color: light-dark(var(--color-static-light-2), var(--color-static-dark-4));
+        border: solid 20px light-dark(var(--color-accent-light-primary), var(--color-accent-dark-primary));
+        border-left-color: light-dark(var(--color-accent-light-primary), var(--color-accent-dark-primary));
+        border-left-style: solid;
         z-index: 1;
-        /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
-        animation: 2.5s ease-out 0s forwards image-reveal ;
+        animation: 2.5s ease-out 0s forwards image-reveal;
     }
 
     >picture {
+
         grid-area: header / gutter-left / header / gutter-right;
-
-        img {
-            object-fit: cover;
-        }
-
-        @media (max-width: 980px) {
-
-            & {
-                mask-image: initial !important;
-            }
-
-        }
 
     }
 
-    >span#text-overlay {
-        grid-area: header / gutter-left / header / gutter-right;
-        z-index: 2;
-        font-family: var(--font-1-family);
-        font-weight: var(--font-1-weight-medium);
-        font-size: clamp(100vh, 100vh, 100vw);
-        line-height: 1.6;
-        opacity: 0.05;
-        color: var(--color-accent-light-secondary);
-        filter: blur(6px);
-        mix-blend-mode: plus-lighter;
-        position: relative;
-        visibility: hidden;
-        animation: 37s linear 4s infinite alternate text-scroll;
+    >h1 {
 
-        @media (max-width: 768px) {
-
-            animation: 20s linear 4s infinite alternate text-scroll;
-
-        }
-
-    }
-
-    >hgroup {
-
-        grid-area: header / gutter-left / header / gutter-right;
         z-index: 3;
         align-self: end;
-        /* text-align: center; PLACEHOLDER */
         max-width: 40vw;
-        /* justify-self: center; PLACEHOLDER */
-        /* filter: drop-shadow(0px 0px 70px light-dark(var(--color-accent-dark-primary), var(--color-accent-light-primary)));  PLACEHOLDER */
-
-        >h1:not(.logo-text) {
-
-            font-size: calc(var(--font-2-size-large)*2);
-        }
-
-        >h1.logo-text {
-            /* text-shadow: var(--color-static-light) 10px 10px 3rem; PLACEHOLDER */
-            font-size: clamp(3rem, 8vh, 10vh);
-            padding: var(--space-medium);
-            line-height: 0.8;
-            font-family: var(--font-1-family);
-            font-weight: var(--font-1-weight-medium);
-
-            >span {
-                font-family: var(--font-2-family);
-                font-size: var(--font-2-size-large);
-                font-weight: var(--font-2-weight-heavy);
-            }
-        }
-
-        >h1:not(.logo-text)>span {
-
-            font-family: var(--font-2-family);
-            font-size: var(--font-2-size-large);
-            display: block;
-            position: relative;
-            top: -0.6em;
-        }
-
-        p {
-            padding-bottom: var(--space-medium);
-            text-shadow: var(--color-accent-light-primary) 1px 1px 5rem;
-        }
-
-        div {
-            display: flex;
-            gap: var(--space-small);
-            place-content: center;
-
-            @media (max-width: 768px) {
-
-                flex-direction: column;
-
-            }
-        }
-
-        button {
-            border-color: inherit;
-
-            @media (max-width: 768px) {
-
-                min-width: 60vw;
-
-            }
-
-        }
-
-        @media (max-width: 768px) {
-
-            grid-area: 1 / 1 / 2 / -1 !important;
-            padding: var(--space-small) !important;
-
-        }
-
-        @media (max-width: 980px) {
-
-            grid-area: 1 / 2 / 2 / -2;
-
-        }
-
-        @media (max-width: 1200px) {
-
-            max-width: none;
-            padding: var(--space-large);
-
-        }
-
-    }
-
-    @media (max-width: 980px) {
-
-        mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
+        font-size: clamp(3rem, 8vh, 10vh);
+        padding: var(--space-medium);
+        line-height: 0.85;
+        margin-bottom: 0;
 
     }
 
