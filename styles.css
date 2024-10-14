@@ -483,6 +483,16 @@
         grid-area: footer;
         grid-row-start: 1;
         align-self: end;
+        grid-column-start: 5;
+        grid-column-end: -1;
+        justify-self: end;
+
+        >ul {
+
+            display: flex;
+            column-gap: var(--space-medium);
+
+        }
 
     }
 
@@ -1055,6 +1065,7 @@ header {
         padding: var(--space-medium);
         line-height: 0.85;
         margin-bottom: 0;
+        grid-column-start: 1;
 
     }
 
@@ -1242,6 +1253,7 @@ footer {
 
     >h2 {
         margin: 0;
+        grid-column-start: 1;
     }
 
     @media (max-width: 980px) {
