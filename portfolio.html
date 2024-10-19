@@ -308,6 +308,27 @@ justify-self: end; ">
                 item.classList.add(randomClass);
             }
         });
+    
+        // Function to remove 'span-2-rows' if the item is in the last row
+        function adjustRowSpans() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const rowHeight = galleryItems[0].offsetHeight; // Assuming all grid items have the same height
+    
+            galleryItems.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top; // Get the top position of each item
+                const galleryBottom = gallery.getBoundingClientRect().bottom; // Get the bottom position of the gallery
+                
+                // If the item's bottom edge is near the bottom of the gallery, it's in the last row
+                if (galleryBottom - itemTop < rowHeight * 2) {
+                    if (item.classList.contains('span-2-rows')) {
+                        item.classList.remove('span-2-rows');
+                    }
+                }
+            });
+        }
+    
+        // Run the adjustRowSpans function after the DOM is fully rendered
+        window.onload = adjustRowSpans;
     </script>
 
 
