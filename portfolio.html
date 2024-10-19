@@ -281,25 +281,8 @@ justify-self: end; ">
     </footer>
 
     <script>
-        // JavaScript to randomly apply classes and shuffle items
-    
-        // Shuffle the gallery items
-        const gallery = document.querySelector('.gallery');
-        const itemsArray = Array.from(gallery.children);
-    
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]]; // Swap elements
-            }
-        }
-    
-        shuffleArray(itemsArray); // Shuffle the items
-    
-        // Remove existing items and append them back in random order
-        itemsArray.forEach(item => gallery.appendChild(item));
-    
         // Apply random classes for spanning rows and columns
+        const itemsArray = document.querySelectorAll('.gallery-item');
         const classes = ['span-2-cols', 'span-2-rows', 'span-2-cols-rows'];
         
         itemsArray.forEach(item => {
@@ -316,7 +299,7 @@ justify-self: end; ">
     
             galleryItems.forEach(item => {
                 const itemTop = item.getBoundingClientRect().top; // Get the top position of each item
-                const galleryBottom = gallery.getBoundingClientRect().bottom; // Get the bottom position of the gallery
+                const galleryBottom = document.querySelector('.gallery').getBoundingClientRect().bottom; // Get the bottom position of the gallery
                 
                 // If the item's bottom edge is near the bottom of the gallery, it's in the last row
                 if (galleryBottom - itemTop < rowHeight * 2) {
