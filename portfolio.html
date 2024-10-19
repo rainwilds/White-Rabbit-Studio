@@ -42,16 +42,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 10px;
-            padding: 10px;
+            grid-auto-flow: dense;
         }
 
         .gallery-item {
             position: relative;
             overflow: hidden;
-            background-color: #f0f0f0;
         }
 
-        /* Styles for items spanning multiple columns/rows */
         .span-2-cols {
             grid-column: span 2;
         }
@@ -65,7 +63,6 @@
             grid-row: span 2;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .span-2-cols,
             .span-2-rows,
@@ -148,6 +145,18 @@ margin: 0 5vw;">
     </div>
     <div class="gallery-item">
         <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 6">
+    </div>
+    <div class="gallery-item">
+        <blockquote cite="https://www.huxley.net/bnw/four.html">
+            <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+          </blockquote>
+          <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+    </div>
+    <div class="gallery-item">
+        <blockquote cite="https://www.huxley.net/bnw/four.html">
+            <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+          </blockquote>
+          <p>—Aldous Huxley, <cite>Brave New World</cite></p>
     </div>
 </div>
 
@@ -273,20 +282,35 @@ justify-self: end; ">
 
     </footer>
 
-<script>
-    // JavaScript to randomly apply classes
-    const items = document.querySelectorAll('.gallery-item');
-    const classes = ['span-2-cols', 'span-2-rows', 'span-2-cols-rows'];
-
-    items.forEach(item => {
-        // Generate a random index to pick a class or leave it blank for no change
-        const randomClass = Math.random() > 0.5 ? classes[Math.floor(Math.random() * classes.length)] : '';
-        // Ensure that if a random class is selected, it's applied
-        if (randomClass) {
-            item.classList.add(randomClass);
+    <script>
+        // JavaScript to randomly apply classes and shuffle items
+    
+        // Shuffle the gallery items
+        const gallery = document.querySelector('.gallery');
+        const itemsArray = Array.from(gallery.children);
+    
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+            }
         }
-    });
-</script>
+    
+        shuffleArray(itemsArray); // Shuffle the items
+    
+        // Remove existing items and append them back in random order
+        itemsArray.forEach(item => gallery.appendChild(item));
+    
+        // Apply random classes for spanning rows and columns
+        const classes = ['span-2-cols', 'span-2-rows', 'span-2-cols-rows'];
+        
+        itemsArray.forEach(item => {
+            const randomClass = Math.random() > 0.5 ? classes[Math.floor(Math.random() * classes.length)] : '';
+            if (randomClass) {
+                item.classList.add(randomClass);
+            }
+        });
+    </script>
 
 
 </body>
