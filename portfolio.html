@@ -40,7 +40,7 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 10px;
             padding: 10px;
         }
@@ -49,13 +49,6 @@
             position: relative;
             overflow: hidden;
             background-color: #f0f0f0;
-        }
-
-        /* Ensure images fill their container with object-fit: cover */
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures images cover their containers without distortion */
         }
 
         /* Styles for items spanning multiple columns/rows */
@@ -280,19 +273,21 @@ justify-self: end; ">
 
     </footer>
 
-    <script>
-        // JavaScript to randomly apply classes
-        const items = document.querySelectorAll('.gallery-item');
-        const classes = ['span-2-cols', 'span-2-rows', 'span-2-cols-rows'];
-    
-        items.forEach(item => {
-            // Generate a random index to pick a class or leave it blank for no change
-            const randomClass = Math.random() > 0.5 ? classes[Math.floor(Math.random() * classes.length)] : '';
-            if (randomClass) {
-                item.classList.add(randomClass);
-            }
-        });
-    </script>
+<script>
+    // JavaScript to randomly apply classes
+    const items = document.querySelectorAll('.gallery-item');
+    const classes = ['span-2-cols', 'span-2-rows', 'span-2-cols-rows'];
+
+    items.forEach(item => {
+        // Generate a random index to pick a class or leave it blank for no change
+        const randomClass = Math.random() > 0.5 ? classes[Math.floor(Math.random() * classes.length)] : '';
+        // Ensure that if a random class is selected, it's applied
+        if (randomClass) {
+            item.classList.add(randomClass);
+        }
+    });
+</script>
+
 
 </body>
 
