@@ -36,8 +36,6 @@
     <script src="./scripts.js" defer></script> -->
 
     <style>
-
-
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -123,45 +121,47 @@
         </section>
 
 
-<section style="    grid-column-start: 1;
+        <section style="    grid-column-start: 1;
 grid-column-end: -1;
 margin: 0 5vw;">
 
-<div class="gallery">
-    <div class="gallery-item">
-        <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 1">
-    </div>
-    <div class="gallery-item">
-        <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 2">
-    </div>
-    <div class="gallery-item">
-        <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 3">
-    </div>
-    <div class="gallery-item">
-        <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 4">
-    </div>
-    <div class="gallery-item">
-        <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 5">
-    </div>
-    <div class="gallery-item">
-        <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 6">
-    </div>
-    <div class="gallery-item">
-        <blockquote cite="https://www.huxley.net/bnw/four.html">
-            Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.
-            <p>Aldous Huxley</p>
-          </blockquote>
-    </div>
-    <div class="gallery-item">
-        <blockquote cite="https://www.huxley.net/bnw/four.html">
-            Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.
-            <p>Aldous Huxley</p>
-          </blockquote>
-    </div>
-</div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainwilds.github.io/White-Rabbit-Studio/img/sample.jpg" alt="Image 6">
+                </div>
+                <div class="gallery-item">
+                    <blockquote cite="https://www.huxley.net/bnw/four.html">
+                        Words can be like X-rays, if you use them properly—they’ll go through anything. You read and
+                        you’re pierced.
+                        <p>Aldous Huxley</p>
+                    </blockquote>
+                </div>
+                <div class="gallery-item">
+                    <blockquote cite="https://www.huxley.net/bnw/four.html">
+                        Words can be like X-rays, if you use them properly—they’ll go through anything. You read and
+                        you’re pierced.
+                        <p>Aldous Huxley</p>
+                    </blockquote>
+                </div>
+            </div>
 
 
-</section>
+        </section>
 
 
 
@@ -283,26 +283,43 @@ justify-self: end; ">
     </footer>
 
     <script>
+        // JavaScript to randomly shuffle gallery items and apply random classes
+
+        const gallery = document.querySelector('.gallery');
+        const itemsArray = Array.from(gallery.children);
+
+        // Shuffle the gallery items using the Fisher-Yates algorithm
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+            }
+        }
+
+        shuffleArray(itemsArray); // Shuffle the items
+
+        // Remove existing items and append them back in random order
+        itemsArray.forEach(item => gallery.appendChild(item));
+
         // Apply random classes for spanning rows and columns
-        const itemsArray = document.querySelectorAll('.gallery-item');
         const classes = ['span-2-cols', 'span-2-rows', 'span-2-cols-rows'];
-        
+
         itemsArray.forEach(item => {
             const randomClass = Math.random() > 0.5 ? classes[Math.floor(Math.random() * classes.length)] : '';
             if (randomClass) {
                 item.classList.add(randomClass);
             }
         });
-    
+
         // Function to remove 'span-2-rows' if the item is in the last row
         function adjustRowSpans() {
             const galleryItems = document.querySelectorAll('.gallery-item');
             const rowHeight = galleryItems[0].offsetHeight; // Assuming all grid items have the same height
-    
+
             galleryItems.forEach(item => {
                 const itemTop = item.getBoundingClientRect().top; // Get the top position of each item
                 const galleryBottom = document.querySelector('.gallery').getBoundingClientRect().bottom; // Get the bottom position of the gallery
-                
+
                 // If the item's bottom edge is near the bottom of the gallery, it's in the last row
                 if (galleryBottom - itemTop < rowHeight * 2) {
                     if (item.classList.contains('span-2-rows')) {
@@ -311,7 +328,7 @@ justify-self: end; ">
                 }
             });
         }
-    
+
         // Run the adjustRowSpans function after the DOM is fully rendered
         window.onload = adjustRowSpans;
     </script>
