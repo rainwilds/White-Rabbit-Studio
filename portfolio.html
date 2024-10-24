@@ -76,6 +76,15 @@
                 grid-row: span 1;
             }
         } */
+
+.gallery img {
+    transition: 500ms linear;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
     </style>
 
 </head>
@@ -106,8 +115,11 @@
 
 
         <section style="    grid-column-start: 1;
-        grid-column-end: span 4;
-        margin-left: 5vw;     align-self: end;   ">
+        grid-column-end: span 8;
+        margin-left: 5vw;
+        align-self: end;
+        display: flex;
+        gap: var(--space-small);">
 
 
             <h2 style="    border-left: 50px solid light-dark(var(--color-accent-light-primary), var(--color-accent-dark-primary));
